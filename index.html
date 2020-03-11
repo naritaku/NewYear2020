@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Happy New Year!!</title>
+<meta charset="utf-8">
+
+<meta name="description" content="昨年はお世話になりました。今年もよろしくお願いします。">
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@Harimaru_spoon" />
+<meta property="og:url" content="https://newyear-nengajo.web.app/" />
+<meta property="og:title" content="Happy New Year! 2020" />
+<meta property="og:description" content="新年あけましておめでとうございます。今年もよろしくお願いします。" />
+<meta property="og:image" content="https://newyear-nengajo.web.app/src/card.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="620" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--css & js-->
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/main.css">
+<link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu|Kosugi+Maru&display=swap" rel="stylesheet">
+<script src="./js/pathseg.js"></script>
+
+<link rel="shortcut icon" href="src/favicon.ico">
+</head>
+<body>
+<div id="contentBox">
+<div id="Message">
+    <h1 class="popupHide"><span class="wr">あけまして</span><span class="wr">おめでとう</span><span class="wr">ございます</span><br><span class="wr">今年も</span><span class="wr">よろしく</span><span class="wr">お願いします</span></h1>
+    <div class="flat line1">
+        <img class="rotateChum" src="./src/img/hedge1.png">
+        <img class="rotateChum" src="./src/img/hedge2.png">
+        <img class="rotateChum" src="./src/img/hedge1.png">
+        <img class="rotateChum" src="./src/img/hedge2.png">
+    </div>
+
+    <p class="popupHide"><span class="wr">子年なので</span><span class="wr">近くにいる</span><span class="wr">同じキャラを</span><span class="wr">繋げて消す</span><span class="wr">パズルゲーム</span><span class="wr">CHUM-CHUMを</span><span class="wr">作ってみました。</span><br>
+        <span class="wr">1回30秒で、</span><span class="wr">最後におみくじが出ます。</span><span class="wr">もしよろしければお試しください。</span><br>
+        <span class="wr">ゲームを始めると音が出ます。</span><span class="wr">ご注意ください。</span></p>
+
+
+    <video controls src="./src/movie/demo.mp4" width="320" height="480" class="movie" id="howto"> </video>
+    <div class="flat btn">
+        <div class="btn-border" onclick="RadeyGame()">始める</div>
+        <div class="btn-border" id="hide"  onclick="Howto()">操作説明</div>
+        <div class="btn-border movie" onclick="location.reload()">トップへ戻る</div>
+    </div>
+
+
+    <div class="flat line2">
+        <img class="rotateChum" src="./src/img/mouse1.png">
+        <img class="rotateChum" src="./src/img/mouse2.png">
+        <img class="rotateChum" src="./src/img/mouse1.png">
+        <img class="rotateChum" src="./src/img/mouse2.png">
+    </div>
+    <div class="flat  line3">
+        <img class="rotateChum" src="./src/img/hedge1.png">
+        <img class="rotateChum" src="./src/img/hedge2.png">
+        <img class="rotateChum" src="./src/img/hedge1.png">
+        <img class="rotateChum" src="./src/img/hedge2.png">
+    </div>
+    <div class="flat line4">
+        <img class="rotateChum" src="./src/img/mouse1.png">
+        <img class="rotateChum" src="./src/img/mouse2.png">
+        <img class="rotateChum" src="./src/img/mouse1.png">
+        <img class="rotateChum" src="./src/img/mouse2.png">
+    </div>
+</div>
+<div id="score" style="display:none;">
+<h3>繋げた最大の数:<span id="maxChain"></span></h3>
+<h3>消した総数:<span id="total"></span></h3>
+<h1>あなたの運勢:<span id="luck"></span></h1>
+<p>あなたにいいことが起こりますように</p>
+<div class="btn-border" onclick="location.reload()">トップへ戻る</div>
+
+</div>
+    <main id="canvas"></main>
+</div>
+</body>
+
+<script src="./js/matter.min.js"></script>
+<script src="./js/main.js"></script>
+
+</html>
